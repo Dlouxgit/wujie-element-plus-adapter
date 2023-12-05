@@ -1,7 +1,7 @@
 {
   "name": "wujie-element-plus-adapter",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2-beta.0",
   "packageManager": "pnpm@8.11.0",
   "description": "element-plus adapter for wujie",
   "license": "MIT",
@@ -48,7 +48,7 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
-  "peerDependencies": {
+  "dependencies": {
     "element-plus": "^2.3.8",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
