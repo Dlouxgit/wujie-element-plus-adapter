@@ -1,4 +1,4 @@
-# pkg-placeholder
+# wujie-element-plus-adapter
 
 wujie 接入 element-plus 子应用时，子应用需要做的内容封装。
 目的是为了对子应用屏蔽细节，不再繁琐适配。
