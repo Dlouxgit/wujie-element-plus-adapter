@@ -1,7 +1,7 @@
 {
   "name": "wujie-element-plus-adapter",
   "type": "module",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2-beta.1",
   "packageManager": "pnpm@8.11.0",
   "description": "element-plus adapter for wujie",
   "license": "MIT",
