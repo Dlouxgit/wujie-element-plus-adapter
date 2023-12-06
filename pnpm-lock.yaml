@@ -1,64 +1,62 @@
 lockfileVersion: '6.0'
 
-importers:
+dependencies:
+  element-plus:
+    specifier: ^2.3.8
+    version: 2.4.3(vue@3.3.10)
+  vue:
+    specifier: ^3.3.4
+    version: 3.3.10(typescript@5.3.2)
+  vue-router:
+    specifier: ^4.2.4
+    version: 4.2.5(vue@3.3.10)
 
-  .:
-    dependencies:
-      element-plus:
-        specifier: ^2.3.8
-        version: 2.4.3(vue@3.3.10)
-      vue:
-        specifier: ^3.3.4
-        version: 3.3.10(typescript@5.3.2)
-      vue-router:
-        specifier: ^4.2.4
-        version: 4.2.5(vue@3.3.10)
-    devDependencies:
-      '@antfu/eslint-config':
-        specifier: ^2.2.2
-        version: 2.2.2(eslint@8.55.0)(typescript@5.3.2)(vitest@1.0.0-beta.6)
-      '@antfu/ni':
-        specifier: ^0.21.12
-        version: 0.21.12
-      '@antfu/utils':
-        specifier: ^0.7.6
-        version: 0.7.6
-      '@types/node':
-        specifier: ^20.10.3
-        version: 20.10.3
-      bumpp:
-        specifier: ^9.2.0
-        version: 9.2.0
-      eslint:
-        specifier: ^8.55.0
-        version: 8.55.0
-      esno:
-        specifier: ^4.0.0
-        version: 4.0.0
-      lint-staged:
-        specifier: ^15.2.0
-        version: 15.2.0
-      pnpm:
-        specifier: ^8.11.0
-        version: 8.11.0
-      rimraf:
-        specifier: ^5.0.5
-        version: 5.0.5
-      simple-git-hooks:
-        specifier: ^2.9.0
-        version: 2.9.0
-      typescript:
-        specifier: ^5.3.2
-        version: 5.3.2
-      unbuild:
-        specifier: ^2.0.0
-        version: 2.0.0(typescript@5.3.2)
-      vite:
-        specifier: ^5.0.5
-        version: 5.0.5(@types/node@20.10.3)
-      vitest:
-        specifier: ^1.0.0-beta.6
-        version: 1.0.0-beta.6(@types/node@20.10.3)
+devDependencies:
+  '@antfu/eslint-config':
+    specifier: ^2.2.2
+    version: 2.2.2(eslint@8.55.0)(typescript@5.3.2)(vitest@1.0.0-beta.6)
+  '@antfu/ni':
+    specifier: ^0.21.12
+    version: 0.21.12
+  '@antfu/utils':
+    specifier: ^0.7.6
+    version: 0.7.6
+  '@types/node':
+    specifier: ^20.10.3
+    version: 20.10.3
+  bumpp:
+    specifier: ^9.2.0
+    version: 9.2.0
+  eslint:
+    specifier: ^8.55.0
+    version: 8.55.0
+  esno:
+    specifier: ^4.0.0
+    version: 4.0.0
+  lint-staged:
+    specifier: ^15.2.0
+    version: 15.2.0
+  pnpm:
+    specifier: ^8.11.0
+    version: 8.11.0
+  rimraf:
+    specifier: ^5.0.5
+    version: 5.0.5
+  simple-git-hooks:
+    specifier: ^2.9.0
+    version: 2.9.0
+  typescript:
+    specifier: ^5.3.2
+    version: 5.3.2
+  unbuild:
+    specifier: ^2.0.0
+    version: 2.0.0(typescript@5.3.2)
+  vite:
+    specifier: ^5.0.5
+    version: 5.0.5(@types/node@20.10.3)
+  vitest:
+    specifier: ^1.0.0-beta.6
+    version: 1.0.0-beta.6(@types/node@20.10.3)
 
 packages:
 
@@ -4575,6 +4573,17 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
+
+peerDependencies:
+  element-plus:
+    specifier: ^2.3.8
+    version: 2.4.3(vue@3.3.10)
+  vue:
+    specifier: ^3.3.4
+    version: 3.3.10(typescript@5.3.2)
+  vue-router:
+    specifier: ^4.2.4
+    version: 4.2.5(vue@3.3.10)
 
 settings:
   autoInstallPeers: true

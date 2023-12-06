@@ -97,7 +97,8 @@ declare global {
       shadowRoot?: ShadowRoot
       props?: {
         jump (q: { url?: string, name?: string }): void
-        [key: string]: unknown
+        getMenuPermissions (q: string[]): any[]
+        [key: string]: any
       }
       location?: { [key: string]: unknown }
     }
