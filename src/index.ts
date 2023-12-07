@@ -55,9 +55,7 @@ export const subAppInit: TSubAppInit = ({
         router.replace({ path: mainAppPath, ...query })
       })
 
-      router.beforeEach((to, from) => {
-        if (to.path === '/' && from.path === '/')
-          return
+      router.beforeEach((to) => {
         if (to.path !== mainAppPath)
           window.$wujie?.bus.$emit('sub-route-change', SUB_NAMESPACE, to)
         else
