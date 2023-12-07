@@ -76,6 +76,13 @@ export const subAppInit: TSubAppInit = ({
   }
 }
 
+export function jump(url: string) {
+  if (window.$wujie)
+    window.$wujie?.props?.jump({ url })
+  else
+    window.location.href = url
+}
+
 declare global {
   interface Window {
     // 是否存在无界
