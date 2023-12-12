@@ -83,6 +83,13 @@ export function jump(url: string) {
     window.location.href = url
 }
 
+export function jumpThird(url: string) {
+  if (window.$wujie)
+    window.$wujie?.props?.jumpThird(url)
+  else
+    window.location.href = url
+}
+
 declare global {
   interface Window {
     // 是否存在无界
@@ -102,6 +109,7 @@ declare global {
       shadowRoot?: ShadowRoot
       props?: {
         jump (q: { url?: string, name?: string }): void
+        jumpThird (url: string): void
         getMenuPermissions (q: string[]): any[]
         [key: string]: any
       }
