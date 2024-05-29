@@ -50,8 +50,9 @@ export const subAppInit: TSubAppInit = ({
       init(app)
       dispose = fixElementPlusTeleportCrash()
       const router = getRouter()
-      window.$wujie?.bus.$on('main-route-change', ({ path, ...query }: { path: string, query: Record<string, string> }) => {
-        mainAppPath = `${path.replace(`/${SUB_NAMESPACE}`, '')}`
+      window.$wujie?.bus.$on('main-route-change', ({ path: _, ...query }: { path: string, href: string, query: Record<string, string> }) => {
+        mainAppPath = `${query.href.replace('/manage', '')}`
+        mainAppPath = `${mainAppPath.replace(`/${SUB_NAMESPACE}`, '')}`
         router.replace({ path: mainAppPath, ...query })
       })
 
@@ -61,7 +62,8 @@ export const subAppInit: TSubAppInit = ({
         }
         else if (to.path !== mainAppPath) {
           window.$wujie?.bus.$emit('sub-route-change', SUB_NAMESPACE, to)
-          mainAppPath = `${to.path.replace(`/${SUB_NAMESPACE}`, '')}`
+          mainAppPath = `${((to as unknown as { href: string }).href || to.path)?.replace('/manage', '')}`
+          mainAppPath = `${mainAppPath.replace(`/${SUB_NAMESPACE}`, '')}`
         }
         else {
           mainAppPath = ''
