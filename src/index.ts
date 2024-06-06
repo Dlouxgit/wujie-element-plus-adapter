@@ -98,6 +98,16 @@ export function jumpThird(url: string) {
     window.location.href = url
 }
 
+export const getMenuPermissions = window.$wujie?.props?.getMenuPermissions || (() => [])
+
+export const getWebSiteConfig = window.$wujie?.props?.getWebSiteConfig || (() => ({}))
+
+export const getDefaultLanguage = window.$wujie?.props?.getDefaultLanguage || (() => 'zh-CN')
+
+export const getLocalConfigSource = window.$wujie?.props?.getLocalConfigSource || (() => ({}))
+
+export const createDownload = window.$wujie?.props?.createDownload || (() => {})
+
 declare global {
   interface Window {
     // 是否存在无界
@@ -118,7 +128,18 @@ declare global {
       props?: {
         jump (q: { url?: string, name?: string }): void
         jumpThird (url: string): void
-        getMenuPermissions (q: string[]): any[]
+        getMenuPermissions (apps?: string[]): any[]
+        getWebSiteConfig (): {
+          organizeId?: number
+          fullName?: string
+          logoUrl?: string
+          faviconUrl?: string
+          shortName?: string
+          tenantKey?: string
+        }
+        getDefaultLanguage (): 'zh-CN' | 'en-US' | 'zh-TW' | 'ja-JP' | string
+        getLocalConfigSource (type: 'element-plus' | 'ui-components'): Record<string, any>
+        createDownload (startRight: number, startTop: number): void
         [key: string]: any
       }
       location?: { [key: string]: unknown }
